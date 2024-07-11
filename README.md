@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # chromatin_imaging
 
 
@@ -91,3 +92,7 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+=======
+# chromatin_ndd
+Code for bachelorsthesis of Dario "Evaluating the Potential of AI-Based Chromatin Imaging Analysis to detect Signals of Neurodegenerative Diseases in Liquid Biopsies"
+>>>>>>> 6f3f92db7ec5e552e1f4aa5b7e2f8f833cd24520
