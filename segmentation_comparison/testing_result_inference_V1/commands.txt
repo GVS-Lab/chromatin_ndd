@@ -1,0 +1,1 @@
+['test.py', '--data_name', 'inference_V1', '--mode', 'test', '--backbone', 'resAttUNet', '--data_dir', 'data/inference_V1', '--model_dir', 'checkpoints/resAttUNet/NISNet3D-synth/NISNet3D_V1-V4.pth', '--block_size', '128', '--eval', '0', '--k_val', '1', '--condition_erode', '0', '--small_obj_vox', '20']
