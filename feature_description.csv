@@ -1,0 +1,122 @@
+Nr,feature,description,category
+0,label,Object ID in the segmented image,regionprops
+1,convex_area,"Volume of the convex hull image, which is the smallest convex polygon that encloses the region.",regionprops
+2,bbox_area,Volume of bounding box,regionprops
+3,area,Volume of nucleus mask,regionprops
+4,euler_number,Euler characteristic of the set of non-zero pixels.  Computed as number of connected components plus number of holes subtracted by number of tunnels.,regionprops
+5,inertia_tensor,Inertia tensor of the region for the rotation around its mass. (Describes distribution of pixel intensities within the image by capturing the moments),regionprops
+6,inertia_tensor_eigvals,Eigenvalues of inertia tensor,regionprops
+7,max_intensity,Maximum intensity of channel,regionprops
+8,min_intensity,Minimum intensity of channel,regionprops
+9,mean_intensity,Mean intensity of channel,regionprops
+10,moments,Spatial moments up to 3rd order,regionprops
+11,moments_central,Central moments (translation invariant) up to 3rd order:,regionprops
+12,moments_hu,"Hu moments (translation, scale and rotation invariant).",regionprops
+13,moments_normalized,Normalized moments (translation and scale invariant) up to 3rd order:,regionprops
+14,moments_weighted,Spatial moments of intensity image up to 3rd order:,regionprops
+15,moments_weighted_central,Central moments (translation invariant) of intensity image up to 3rd order:,regionprops
+16,moments_weighted_hu,"Hu moments (translation, scale and rotation invariant) of intensity image.",regionprops
+17,moments_weighted_normalized,Normalized moments (translation and scale invariant) of intensity image up to 3rd order:,regionprops
+18,min_radius,Minimal distance of the centroid to the boundary,morphology
+19,max_radius,Maximal distance of the centroid to the boundary,morphology
+20,med_radius,Median distance of the centroid to the boundary,morphology
+21,avg_radius,Mean distance of the centroid to the boundary,morphology
+22,mode_radius,Mode of the radial distances,morphology
+23,d25_radius,25%-tile of the radial distances,morphology
+24,d75_radius,75%-tile of the radial distances,morphology
+25,std_radius,Standard deviation of the radial distances,morphology
+26,feret_max,Maximum Feret diameter,morphology
+27,centroid-0,z coordinate of centroid,regionprops
+28,centroid-1,x coordinate of centroid,regionprops
+29,centroid-2,y coordinate of centroid,regionprops
+30,area,volume,morphology
+31,perimeter,Perimeter,morphology
+32,extent,Ratio of the nuclear area of the nucleus and the bounding box in 3D,regionprops
+33,bbox_area,Area of the bounding box,morphology
+34,convex_area,Area of the convex hull,morphology
+35,equivalent_diameter,Diameter of a circle with equal area,regionprops
+36,major_axis_length,Length of the major axis of an ellipsoid of equal area,regionprops
+37,minor_axis_length,Length of the minor axis of an ellipsoid of equal area,regionprops
+38,eccentricity,Eccentricity of an ellipsoid with an equal second-order moment,morphology
+39,orientation,Angle between the y-axis and the major axis,morphology
+40,concavity,Normalized difference of the area of the convex hull and the actual area,morphology
+41,solidity,Area divided by the area of the convex hull,regionprops
+42,a_r,Ratio of the minor to the major axis length,morphology
+43,int_min,Minimal intensity,intensity
+44,int_d25,25%-tile of the intensity distribution,intensity
+45,int_median,Median intensity,intensity
+46,int_d75,75%-tile of the intensity distribution,intensity
+47,int_max,Maximal intensity,intensity
+48,int_mean,Average intensity,intensity
+49,int_mode,Mode of the intensity distribution,intensity
+50,int_sd,Standard deviation of the intensity distribution,intensity
+51,kurtosis,Kurtosis of the intensity distribution,intensity
+52,skewness,Skewness of the intensity distribution,intensity
+53,entropy,Entropy of the intensity distribution,intensity
+54,i80_i20,Ratio of the 80%-to-20%-tile of the intensity distribution,chromatin condensation
+55,nhigh_nlow,Ratio of the area of where the intensity is above the 80%-tile respectively below the 20%-tile of the intensity distribution,chromatin condensation
+56,hc_area_ec_area,Ratio of the area where the intensity is greater the average intensity + a multiple of the standard deviation of the intensity (default =1) as a proxy of the heterochromatin-to-euchromatin content,chromatin condensation
+57,hc_area_nuc_area,Area of the heterochromatin content (see hc_area_ec_area) normalized by the area,chromatin condensation
+58,hc_content_ec_content,Ratio of the summed intensity in the heterochromatin respectively euchromatin regions,chromatin condensation
+59,hc_content_dna_content,Ratio of the summed intensity in the heterochromatin regions normalized by the total area,chromatin condensation
+60,contrast_n_channel,"Contrast of the GLCM matrix for a lag of n pixel and channel, dapi channel if none specified",texture
+61,dissimilarity_n_channel,"Dissimilarity of the GLCM matrix for a lag of n pixel and channel, dapi channel if none specified",texture
+62,homogeneity_n_channel,"Homogeneity of the GLCM matrix for a lag of n pixel and channel, dapi channel if none specified",texture
+63,asm_n_channel,"Angular second moment of the GLCM matrix for a lag of n pixel and channel, dapi channel if none specified",texture
+64,energy_n_channel,"Energy of the GLCM matrix for a lag of n pixel and channel, dapi channel if none specified",texture
+65,correlation_n_channel,"Correlation of the GLCM matrix for a lag of n pixel and channel, dapi channel if none specified",texture
+66,weighted_centroid,coordinate of the weighted centroid in the full image,regionprops
+67,weighted_local_centroid,coordinate of the weighted centroid in the cropped image,regionprops
+68,center_mismatch_channel,Mismatch of center and weighted center for channel,texture
+69,rd_channel_n,Radial distribution of intensity of channel in n bins,intensity
+70,rd_foci_n,Radial distribution of foci in n bins,foci
+71,channel_foci_count,count of foci of channel,foci
+72,channel_foci_volume_mean,Mean of detected foci volume of channel,foci
+73,channel_foci_volume_variance,Variance of detected foci volume of channel,foci
+74,channel_foci_mean_intensity_mean,Mean of the mean intensity of the detected foci of a channel within a nucleus,foci
+75,channel_foci_mean_intensity_variance,Variance of the mean intensity of the detected foci of a channel within a nucleus,foci
+76,channel_foci_d2b_mean,Mean of the distance of detected foci of a channel to the nuclear boundary,foci
+77,channel_foci_d2b_variance,Variance of the distance of detected foci of a channel to the nuclear boundary,foci
+78,channel_foci_ratio_d2b_volume_mean,Mean of the ratio of distance to boundary to volume of detected foci of a channel,foci
+79,channel_foci_ratio_d2b_volume_variance,Variance of the ratio of distance to boundary to volume of detected foci of a channel,foci
+80,channel_foci_d_nearest_neighbor_mean,Mean of distance to nearest neighbor of detected foci of a channel,foci
+81,channel_foci_d_nearest_neighbor_variance,Variance of distance to nearest neighbor of detected foci of a channel,foci
+82,channel_foci_ratio_nearest_neighbor_volume_mean,Mean of the ratio of distance to nearest neighbor to volume of detected foci of a channel,foci
+83,channel_foci_ratio_nearest_neighbor_volume_variance,Variance of the ratio of distance to nearest neighbor to volume of detected foci of a channel,foci
+84,channel_foci_d_nearest_neighbor(verts)_mean,Mean of distance to nearest neighbor calculated using closest vertices of foci of a channel,foci
+85,channel_foci_d_nearest_neighbor(verts)_variance,Variance of distance to nearest neighbor calculated using closest vertices of foci of a channel,foci
+86,channel_foci_ratio_nearest_neighbor(verts)_mean_count,Ratio of channel_foci_d_nearest_neighbor(verts)_mean to channel_foci_count,foci
+87,channel_foci_ratio_nearest_neighbor(verts)_variance_count,Ratio of channel_foci_d_nearest_neighbor(verts)_variance to channel_foci_count,foci
+88,gamma_lamin_coloc_mean,Mean of ratio of mean intensity within gamma foci to lamin intensity at the same coordinates,foci
+89,gamma_lamin_coloc_variance,Variance of ratio of mean intensity within gamma foci to lamin intensity at the same coordinates,foci
+90,gamma_lamin_coloc_p25,25th percentile of ratio of mean intensity within gamma foci to lamin intensity at the same coordinates,foci
+91,gamma_lamin_coloc_p75,75th percentile of ratio of mean intensity within gamma foci to lamin intensity at the same coordinates,foci
+92,gamma_hc_coloc_mean,Mean of ratio of mean intensity within gamma foci to dapi intensity at the same coordinates,foci
+93,gamma_hc_coloc_variance,Variance of ratio of mean intensity within gamma foci to dapi intensity at the same coordinates,foci
+94,gamma_hc_coloc_p25,25th percentile of ratio of mean intensity within gamma foci to dapi intensity at the same coordinates,foci
+95,gamma_hc_coloc_p75,75th percentile of ratio of mean intensity within gamma foci to dapi intensity at the same coordinates,foci
+96,p_of_hc_with_foci,percentage of heterechromatin with gamma foci,foci
+97,p_of_foci_in_hc,percentage of gamma foci in heterochromatin,foci
+98,hc_gamma_coloc_(volumescaled_hc_gamma),Collocalization of gamma and dapi channel scaled by sum of volume of heterochromatin and gamma foci,foci
+99,lamin_boundary_patches,Count of continuos high intensity patches of lamin along the nuclear boundary,foci
+100,ratio_lamin_boundary_patches_volume,Ratio of count of high intensity patches of laimn to their summed volume,foci
+101,lamin_boundary_center_int,Ratio of lamin intensity at nuclear boundary to center,foci
+102,lamin_hole_count,Count of lamin regions (holes in mask) below a certain threshold,foci
+103,lamin_hole_volume_mean,Mean of detected lamin holes volume,foci
+104,lamin_hole_volume_variance,Variance of detected lamin holes volume,foci
+105,lamin_hole_mean_intensity_mean,Mean of the mean intensity of the detected lamin holes within a nucleus,foci
+106,lamin_hole_mean_intensity_variance,Variance of the mean intensity of the detected lamin holes within a nucleus,foci
+107,lamin_hole_d2b_mean,Mean of the distance of detected lamin holes to the nuclear boundary,foci
+108,lamin_hole_d2b_variance,Variance of the distance of detected lamin holes to the nuclear boundary,foci
+109,lamin_hole_ratio_d2b_volume_mean,Mean of the ratio of distance to boundary to volume of detected lamin holes,foci
+110,lamin_hole_ratio_d2b_volume_variance,Variance of the ratio of distance to boundary to volume of detected lamin holes,foci
+111,lamin_hole_d_nearest_neighbor_mean,Mean of distance to nearest neighbor of detected lamin holes,foci
+112,lamin_hole_d_nearest_neighbor_variance,Variance of distance to nearest neighbor of detected lamin holes,foci
+113,lamin_hole_ratio_nearest_neighbor_volume_mean,Mean of the ratio of distance to nearest neighbor to volume of detected lamin holes,foci
+114,lamin_hole_ratio_nearest_neighbor_volume_variance,Variance of the ratio of distance to nearest neighbor to volume of detected lamin holes,foci
+115,lamin_hole_d_nearest_neighbor(verts)_mean,Mean of distance to nearest neighbor calculated using closest vertices of lamin holes,foci
+116,lamin_hole_d_nearest_neighbor(verts)_variance,Variance of distance to nearest neighbor calculated using closest vertices of lamin holes,foci
+117,lamin_hole_ratio_nearest_neighbor(verts)_mean_count,Ratio of lamin_hole_d_nearest_neighbor(verts)_mean to channel_lamin holes_count,foci
+118,lamin_hole_ratio_nearest_neighbor(verts)_variance_count,Ratio of lamin_hole_d_nearest_neighbor(verts)_variance to channel_lamin holes_count,foci
+,,,
+,Note:,Features that don't get calculated by default when running the pipeline (issue with memory usage) are not included,
