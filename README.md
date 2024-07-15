@@ -1,98 +1,40 @@
-<<<<<<< HEAD
-# chromatin_imaging
+<h1>Chromatin NDD</h1>
+This repository contains the code for the bachelor’s thesis of Dario.
+It encompasses a pipeline the process, segment and extract features describing the chromatin organisation of stained nuclei in confocal images. A file describing all the extracted features is included.
+Furthermore, a 3D adaptation for calculation Gray-Level-Co-occurence matrix in 3D using python is also part of this repository.
 
+<h2>Project structure</h2>
+<h4>exp1_rep1, exp1_rep2, exp3, exp3_dapi </h4>
+These folders contain the notebooks used for the analysis of the experments described in the thesis after extracting the features using the code in this repository.
+<h4>features</h4>
+Contains the python scripts to extract the features from nuclear crops (get called by feature_extraction).
+<h4>segmentation_comparison</h4>
+Code and notebooks used to compare the different segmentation methods.
+<h4>feature_description.csv</h4>
+Description of the extracted features
+<h4>glcm_testcases.ipynb</h4>
+Notebook providing testcases for the 3D adaptation of Gray-Level-Co-occurence matrix to test that it works correctly
+<h4>global_morphology_test.ipynb</h4>
+Notebook that was used in an attempt to adapt global morphology features to a 3D version, including a suggested approach that should work (at the bottom)
+<h4>simplified_uml_diagram.png</h4>
+A simplified UML diagram of the pipeline (only including the most important functions and not including input parameter)
 
+<h2>Usage of pipeline</h2>
+The repository contains several scripts and notebooks to preprocess data, perform segmentation and extract features.
 
-## Getting started
+<h4>run_all_pipelines.py</h4> - calls the other scripts to run the whole pipeline
+<h4>preprocessing.py</h4> - extracts files from microscope project file and performs the preprocessing as described in the methods section of the thesis
+<h4>segmentation.py</h4> - segments the nuclei from the images using MultiOtsu thresholding
+<h4>feature_extraction.py</h4> - extracts nuclear crops from images and calculates features thereof
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+<h4>How to run the complete pipeline:</h4>
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.fhnw.ch/kahramanlab/chromatin_imaging.git
-git branch -M main
-git push -uf origin main
+python run_all_pipelines.py --input_dir <input directory> --output_dir <output directory> --run_all
 ```
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.fhnw.ch/kahramanlab/chromatin_imaging/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-=======
-# chromatin_ndd
-Code for bachelorsthesis of Dario "Evaluating the Potential of AI-Based Chromatin Imaging Analysis to detect Signals of Neurodegenerative Diseases in Liquid Biopsies"
->>>>>>> 6f3f92db7ec5e552e1f4aa5b7e2f8f833cd24520
+<h2>3D adaptation of Gray-Level-Co-occurence matrix (GLCM)</h2>
+The code to calculate GLCM of 3D images can be found in features/utils/graycomatrix.py </br>
+Features of the calculated GLCMs were extracted in features/img_texture.py </br>
+Testcases to see that the 3D adapation worked are shown in glcm_testcases.ipynb 
