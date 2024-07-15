@@ -1,0 +1,3 @@
+Feature: hc_area_ec_area
+Mann-Whitney U statistic: 283543.0
+Mann-Whitney U test p-value: 1.2691347406262894e-43

@@ -1,0 +1,3 @@
+Feature: hc_content_ec_content
+Mann-Whitney U statistic: 278552.0
+Mann-Whitney U test p-value: 7.033669585182282e-39
